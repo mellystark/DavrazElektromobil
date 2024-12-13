@@ -1,0 +1,9 @@
+﻿# .vs klasörü, Visual Studio'nun proje dosyalarını içerir
+.vs/
+
+# Derleme çıktıları
+bin/
+obj/
+
+# NuGet Paketleri
+*.nupkg
