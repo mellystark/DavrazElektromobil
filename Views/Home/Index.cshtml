@@ -1,8 +1,126 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model DavrazElektromobil.Models.HomeViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa - Üniversite Topluluğu</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <section class="home" id="home">
+            <div class="container">
+                <h1 class="header__title">@Model.Quote</h1>
+                <p class="header__quote">@Model.Author</p>
+            </div>
+        </section>
+    </header>
+
+    <section class="intro">
+        <div class="container">
+            <h2>Yarış Bilgisi</h2>
+            <p>@Model.IntroText</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>Biz Kimiz?</h2>
+            <p>@Model.AboutText</p>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Takımımız</h2>
+            <div class="team__members">
+                @foreach (var member in Model.TeamMembers)
+                {
+                    <div class="member">
+                        <img src="@member.ImageUrl" alt="@member.Name" class="member__image">
+                        <p class="member__name">@member.Name</p>
+                        <p class="member__role">@member.Role</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Yeni Galeri Bölümü -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2>Galeri</h2>
+            <div class="gallery__grid">
+                <!-- Resim 1 -->
+                <div class="gallery__item" ">
+                    <img src="https://isparta.edu.tr/SDU_Files/Images/WhatsApp%20Image%202022-07-24%20at%2011_27_02.jpeg" alt="Galeri Resmi 1" class="img-fluid rounded">
+                </div>
+                <!-- Resim 2 -->
+                <div class="gallery__item" ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEa9IH7xe8m98V2JfCVDCT3_MGDY5ArCRGw&s" alt="Galeri Resmi 2" class="img-fluid rounded">
+                </div>
+                <!-- Resim 3 -->
+                <div class="gallery__item" ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW4nqXSq4CvTxtMrlpfsFwKTZHJ6asan1Qsw&s" alt="Galeri Resmi 3" class="img-fluid rounded">
+                </div>
+                <!-- Resim 4 -->
+                <div class="gallery__item" ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG_edu521gqO3vgNR6Xuk9I6ISX-t8UPA3_g&s" alt="Galeri Resmi 4" class="img-fluid rounded">
+                </div>
+                <!-- Resim 5 -->
+                <div class="gallery__item" ">
+                    <img src="https://www.isparta.edu.tr/SDU_Files/Images/33013(2).jpg" alt="Galeri Resmi 5" class="img-fluid rounded">
+                </div>
+                <!-- Resim 6 -->
+                <div class="gallery__item" ">
+                    <img src="https://www.isparta.edu.tr/SDU_Files/Images/33012(1).jpg" alt="Galeri Resmi 6" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Yeni Sponsorluk Bölümü -->
+    <section class="sponsorship" id="sponsorship">
+        <div class="container">
+            <h2>Sponsorluk</h2>
+            <p>Sponsorluk hakkında bilgiler burada olacak.</p>
+        </div>
+    </section>
+
+    <!-- Yeni İletişim Bölümü -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-form">
+                <h2>İletişime Geçin</h2>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="name">Adınız</label>
+                        <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz</label>
+                        <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" name="message" placeholder="Mesajınızı buraya yazın" required></textarea>
+                    </div>
+                    <button type="submit">Gönder</button>
+                </form>
+                <footer>Bizimle iletişime geçtiğiniz için teşekkür ederiz!</footer>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Üniversite Topluluğu. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>

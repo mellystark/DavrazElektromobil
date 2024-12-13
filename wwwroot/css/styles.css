@@ -1,0 +1,327 @@
+﻿/* Genel stil ayarları */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header stil */
+.header {
+    background-color: #002147;
+    color: white;
+    padding: 100px 0 50px;
+    text-align: center;
+    position: relative;
+}
+
+.header__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.header__quote {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Section stil */
+section {
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Team Members */
+.team__members {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    width: 22%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .member:hover {
+        transform: scale(1.05);
+    }
+
+.member__image {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.member__name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.member__role {
+    color: #555;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+    background-color: #002147;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+/* About Bölümünün Temel Stil Ayarları */
+.about {
+    padding: 50px 0; /* Üst ve alt boşluk */
+    text-align: center;
+    border-bottom: 2px solid #dfe6e9; /* Bölüm altına ince bir çizgi ekleyelim */
+}
+
+    .about .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .about h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #f39c12; /* Başlık için dikkat çekici sarı-turuncu renk */
+        margin-bottom: 20px;
+    }
+
+    .about p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: #555; /* Hafif gri renk */
+        margin-bottom: 30px;
+        text-align: justify; /* Metni iki yana yasla */
+    }
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+}
+
+/* Intro Bölümünün Temel Stil Ayarları */
+.intro {
+    padding: 50px 0; /* Üst ve alt boşluk */
+    text-align: center;
+    border-bottom: 2px solid #dfe6e9; /* Bölüm altına ince bir çizgi ekleyelim */
+}
+
+    .intro .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #f39c12; /* Başlık için dikkat çekici sarı-turuncu renk */
+        margin-bottom: 20px;
+    }
+
+    .intro p {
+        font-size: 1.125rem;
+        line-height: 1.8;
+        color: #555; /* Hafif gri renk */
+        margin-bottom: 30px;
+        text-align: justify; /* Metni iki yana yasla */
+    }
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+}
+/* İletişim Formu */
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+}
+
+    /* Başlık */
+    .contact-form h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #333;
+    }
+
+    /* Form Alanları */
+    .contact-form .form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact-form label {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #333;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    /* Giriş Alanları */
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: #333;
+        background-color: #fff;
+        transition: border-color 0.3s ease;
+    }
+
+        /* Giriş Alanları Hover Efekti */
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #0066cc;
+            outline: none;
+        }
+
+    /* Genişlik ve Yükseklik Ayarları */
+    .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    /* Submit Butonu */
+    .contact-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #0066cc;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Submit Butonu Hover Efekti */
+        .contact-form button:hover {
+            background-color: #004d99;
+        }
+
+    /* Footer */
+    .contact-form footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+/* Mobil Uyumlu */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 30px;
+    }
+
+        .contact-form h2 {
+            font-size: 1.5rem;
+        }
+}
+
+/* Galeri Bölümü */
+.gallery {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+    .gallery h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+        color: #343a40;
+    }
+
+/* Galeri Grid Yapısı */
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Her Bir Galeri Öğesi */
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+    /* Galeri Resimleri */
+    .gallery__item img {
+        width: 100%; /* Resim genişliğini %100 yapıyoruz */
+        height: 250px; /* Sabit yükseklik */
+        object-fit: cover; /* Resmin doğru şekilde kesilmesi için */
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+    }
+
+    /* Hover Etkisi */
+    .gallery__item:hover {
+        transform: scale(1.05);
+    }
+
+        .gallery__item:hover img {
+            transform: scale(1.1);
+        }
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .gallery__grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery h2 {
+        font-size: 2rem;
+    }
+}
