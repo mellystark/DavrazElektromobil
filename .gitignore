@@ -7,3 +7,15 @@ obj/
 
 # NuGet Paketleri
 *.nupkg
+
+# Node modules
+node_modules/
+
+# Log files
+npm-debug.log
+
+# Local environment variables
+.env
+
+# Mac system files
+.DS_Store
