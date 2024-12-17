@@ -1,0 +1,17 @@
+﻿@model List<TeamMember>
+
+<section class="team" id="team">
+    <div class="container">
+        <h2>Tüm Takım Üyeleri</h2>
+        <div class="team__members">
+            @foreach (var member in Model)
+            {
+                <div class="member">
+                    <img src="@member.ImageUrl" alt="@member.Name" class="member__image">
+                    <p class="member__name">@member.Name</p>
+                    <p class="member__role">@member.Role</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

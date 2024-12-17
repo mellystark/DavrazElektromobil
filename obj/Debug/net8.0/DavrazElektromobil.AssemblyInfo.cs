@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DavrazElektromobil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6163f32667b26ca820450d2e40b48797c19f94be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16a5aa9f2d240bd6242803cfb1e06f1001cc7a71")]
 [assembly: System.Reflection.AssemblyProductAttribute("DavrazElektromobil")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DavrazElektromobil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
